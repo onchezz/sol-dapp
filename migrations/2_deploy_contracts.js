@@ -1,5 +1,5 @@
-const SimpleStorage = artifacts.require('./web-app/src/contracts/SimpleStorage.sol')
+const Counter = artifacts.require('./contracts/Counter.sol')
 
 module.exports = function (deployer) {
-  deployer.deploy(SimpleStorage)
+  deployer.deploy(Counter)
 }

@@ -5,6 +5,9 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: yarn install
-
-
+  - name: install packages
+    before: npm install -g truffle && truffle migrate
+    init: yarn install  
+    command: cd client && yarn install
+  - name: dev server
+    init: cd client && yarn dev
